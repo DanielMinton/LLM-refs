@@ -4,6 +4,7 @@ import { useState, useMemo } from "react"
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 import { Header } from "@/components/layout/header"
+import { Footer } from "@/components/layout/footer"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
@@ -131,6 +132,7 @@ export default function AudioLeaderboard() {
           Showing {filteredModels.length} of {audioModels.length} models
         </div>
       </main>
+      <Footer />
     </div>
   )
 }

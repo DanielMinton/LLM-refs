@@ -3,6 +3,7 @@ import { ArrowRight, Sparkles, Zap, BookOpen, BarChart3 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Header } from "@/components/layout/header"
+import { Footer } from "@/components/layout/footer"
 import { Badge } from "@/components/ui/badge"
 
 export default function Home() {
@@ -238,12 +239,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="border-t py-12 mt-24">
-        <div className="container text-center text-sm text-muted-foreground">
-          <p>Built by Daniel Minton</p>
-          <p className="mt-2">Data updated daily from multiple sources</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

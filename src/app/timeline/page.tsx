@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowRight, TrendingUp, Zap, DollarSign, Brain, Code, Database, Cpu, Globe, Building2 } from 'lucide-react';
 import { Header } from '@/components/layout/header';
+import { Footer } from '@/components/layout/footer';
 
 export const metadata: Metadata = {
   title: 'LLM Evolution Timeline - AI Models Universe',
@@ -1636,6 +1637,7 @@ export default function TimelinePage() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

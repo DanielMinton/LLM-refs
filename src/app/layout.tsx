@@ -14,8 +14,64 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AI Models Universe - The Ultimate AI Model Reference",
-  description: "Explore, compare, and learn about the vast universe of AI models. From LLMs to vision, audio, and video models.",
+  metadataBase: new URL('https://llm-refs.vercel.app'),
+  title: {
+    default: "LLM-refs - AI Models Universe",
+    template: "%s | LLM-refs"
+  },
+  description: "Comprehensive AI model reference platform. Compare performance, pricing, and capabilities across LLMs, vision, audio, and video models. Created by Daniel Minton.",
+  keywords: ["AI models", "LLM", "language models", "vision models", "audio models", "video models", "AI comparison", "model benchmarks", "GPT", "Claude", "Gemini"],
+  authors: [{ name: "Daniel Minton", url: "https://danielminton.com" }],
+  creator: "Daniel Minton",
+  publisher: "Daniel Minton",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://llm-refs.vercel.app",
+    title: "LLM-refs - AI Models Universe",
+    description: "Comprehensive AI model reference platform. Compare performance, pricing, and capabilities across LLMs, vision, audio, and video models.",
+    siteName: "LLM-refs",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 3840,
+        height: 2160,
+        alt: "LLM-refs - AI Models Universe",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "LLM-refs - AI Models Universe",
+    description: "Comprehensive AI model reference platform. Compare performance, pricing, and capabilities.",
+    creator: "@TheModernOpossum",
+    images: ["/og-image.png"],
+  },
+  icons: {
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    other: [
+      {
+        rel: "mask-icon",
+        url: "/safari-pinned-tab.svg",
+      },
+    ],
+  },
+  manifest: "/site.webmanifest",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "LLM-refs",
+  },
+  formatDetection: {
+    telephone: false,
+  },
 };
 
 export default function RootLayout({

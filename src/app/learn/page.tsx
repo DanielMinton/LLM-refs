@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Header } from '@/components/layout/header';
+import { Footer } from '@/components/layout/footer';
 
 export const metadata: Metadata = {
   title: 'Learn - AI Models Universe',
@@ -303,6 +304,7 @@ export default function LearnPage() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
