@@ -191,15 +191,12 @@ export default function LLMLeaderboard() {
                     <tr key={model.id} className="hover:bg-muted/50 transition-colors">
                       <td className="p-4 font-medium text-muted-foreground">{index + 1}</td>
                       <td className="p-4">
-                        <Link
-                          href={`/models/${model.id}`}
-                          className="hover:underline"
-                        >
+                        <div>
                           <div className="font-semibold">{model.displayName}</div>
                           <div className="text-sm text-muted-foreground font-mono">
                             {model.name}
                           </div>
-                        </Link>
+                        </div>
                       </td>
                       <td className="p-4">
                         <Badge variant="outline">{model.provider}</Badge>

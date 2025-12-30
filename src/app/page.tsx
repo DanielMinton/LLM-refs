@@ -150,10 +150,10 @@ export default function Home() {
                       <tr className="hover:bg-primary/5 hover:shadow-md transition-all duration-300 group cursor-pointer">
                         <td className="p-3 md:p-4 font-medium">1</td>
                         <td className="p-3 md:p-4">
-                          <Link href="/models/gpt-4-turbo" className="hover:underline group-hover:text-primary transition-colors">
+                          <div>
                             <div className="font-semibold">GPT-4 Turbo</div>
                             <div className="text-xs md:text-sm text-muted-foreground">gpt-4-turbo</div>
-                          </Link>
+                          </div>
                         </td>
                         <td className="p-3 md:p-4">
                           <ProviderBadge provider="OpenAI" />
@@ -165,10 +165,10 @@ export default function Home() {
                       <tr className="hover:bg-orange-600/5 hover:shadow-md transition-all duration-300 group cursor-pointer">
                         <td className="p-3 md:p-4 font-medium">2</td>
                         <td className="p-3 md:p-4">
-                          <Link href="/models/claude-opus-4-5" className="hover:underline group-hover:text-orange-600 transition-colors">
+                          <div>
                             <div className="font-semibold">Claude Opus 4.5</div>
                             <div className="text-xs md:text-sm text-muted-foreground">claude-opus-4-5</div>
-                          </Link>
+                          </div>
                         </td>
                         <td className="p-3 md:p-4">
                           <ProviderBadge provider="Anthropic" />
@@ -180,10 +180,10 @@ export default function Home() {
                       <tr className="hover:bg-blue-600/5 hover:shadow-md transition-all duration-300 group cursor-pointer">
                         <td className="p-3 md:p-4 font-medium">3</td>
                         <td className="p-3 md:p-4">
-                          <Link href="/models/gemini-1.5-pro" className="hover:underline group-hover:text-blue-600 transition-colors">
+                          <div>
                             <div className="font-semibold">Gemini 1.5 Pro</div>
                             <div className="text-xs md:text-sm text-muted-foreground">gemini-1.5-pro</div>
-                          </Link>
+                          </div>
                         </td>
                         <td className="p-3 md:p-4">
                           <ProviderBadge provider="Google" />
@@ -195,10 +195,10 @@ export default function Home() {
                       <tr className="hover:bg-orange-600/5 hover:shadow-md transition-all duration-300 group cursor-pointer">
                         <td className="p-3 md:p-4 font-medium">4</td>
                         <td className="p-3 md:p-4">
-                          <Link href="/models/claude-sonnet-4-5" className="hover:underline group-hover:text-orange-600 transition-colors">
+                          <div>
                             <div className="font-semibold">Claude Sonnet 4.5</div>
                             <div className="text-xs md:text-sm text-muted-foreground">claude-sonnet-4-5</div>
-                          </Link>
+                          </div>
                         </td>
                         <td className="p-3 md:p-4">
                           <ProviderBadge provider="Anthropic" />
@@ -210,10 +210,10 @@ export default function Home() {
                       <tr className="hover:bg-green-600/5 hover:shadow-md transition-all duration-300 group cursor-pointer">
                         <td className="p-3 md:p-4 font-medium">5</td>
                         <td className="p-3 md:p-4">
-                          <Link href="/models/deepseek-r1" className="hover:underline group-hover:text-green-600 transition-colors">
+                          <div>
                             <div className="font-semibold">DeepSeek R1</div>
                             <div className="text-xs md:text-sm text-muted-foreground">deepseek-r1</div>
-                          </Link>
+                          </div>
                         </td>
                         <td className="p-3 md:p-4">
                           <ProviderBadge provider="DeepSeek" />
