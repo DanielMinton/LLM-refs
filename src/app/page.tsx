@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
 import { Badge } from "@/components/ui/badge"
+import { ProviderBadge } from "@/components/provider-logos"
 
 export default function Home() {
   return (
@@ -155,7 +156,7 @@ export default function Home() {
                           </Link>
                         </td>
                         <td className="p-3 md:p-4">
-                          <Badge variant="outline" className="group-hover:border-primary/50 transition-colors">OpenAI</Badge>
+                          <ProviderBadge provider="OpenAI" />
                         </td>
                         <td className="p-3 md:p-4 text-right font-mono text-sm">86.4%</td>
                         <td className="p-3 md:p-4 text-right font-mono text-sm">87.2%</td>
@@ -170,7 +171,7 @@ export default function Home() {
                           </Link>
                         </td>
                         <td className="p-3 md:p-4">
-                          <Badge variant="outline" className="group-hover:border-orange-600/50 transition-colors">Anthropic</Badge>
+                          <ProviderBadge provider="Anthropic" />
                         </td>
                         <td className="p-3 md:p-4 text-right font-mono text-sm">88.7%</td>
                         <td className="p-3 md:p-4 text-right font-mono text-sm">92.0%</td>
@@ -185,7 +186,7 @@ export default function Home() {
                           </Link>
                         </td>
                         <td className="p-3 md:p-4">
-                          <Badge variant="outline" className="group-hover:border-blue-600/50 transition-colors">Google</Badge>
+                          <ProviderBadge provider="Google" />
                         </td>
                         <td className="p-3 md:p-4 text-right font-mono text-sm">85.9%</td>
                         <td className="p-3 md:p-4 text-right font-mono text-sm">84.1%</td>
@@ -200,7 +201,7 @@ export default function Home() {
                           </Link>
                         </td>
                         <td className="p-3 md:p-4">
-                          <Badge variant="outline" className="group-hover:border-orange-600/50 transition-colors">Anthropic</Badge>
+                          <ProviderBadge provider="Anthropic" />
                         </td>
                         <td className="p-3 md:p-4 text-right font-mono text-sm">88.3%</td>
                         <td className="p-3 md:p-4 text-right font-mono text-sm">93.7%</td>
@@ -215,7 +216,7 @@ export default function Home() {
                           </Link>
                         </td>
                         <td className="p-3 md:p-4">
-                          <Badge variant="outline" className="group-hover:border-green-600/50 transition-colors">DeepSeek</Badge>
+                          <ProviderBadge provider="DeepSeek" />
                         </td>
                         <td className="p-3 md:p-4 text-right font-mono text-sm">79.8%</td>
                         <td className="p-3 md:p-4 text-right font-mono text-sm">96.3%</td>
