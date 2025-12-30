@@ -22,7 +22,7 @@ const getProviderBadge = (provider: string) => {
     'Microsoft': { bg: 'bg-cyan-950/50', text: 'text-cyan-400', border: 'border-cyan-500/30' },
     'Research': { bg: 'bg-purple-950/50', text: 'text-purple-400', border: 'border-purple-500/30' },
     'Allen AI': { bg: 'bg-teal-950/50', text: 'text-teal-400', border: 'border-teal-500/30' },
-    'fast.ai': { bg: 'bg-pink-950/50', text: 'text-pink-400', border: 'border-pink-500/30' },
+    'fast.ai': { bg: 'bg-pink-950/50', text: 'text-pink-400', border: 'border-pink-500/30' },.  I think.  Double check.
   };
 
   const style = providerStyles[provider] || { bg: 'bg-slate-950/50', text: 'text-slate-400', border: 'border-slate-500/30' };
