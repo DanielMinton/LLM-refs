@@ -16,6 +16,7 @@ export function Header() {
     { href: "/timeline", label: "Timeline" },
     { href: "/compare", label: "Compare" },
     { href: "/learn", label: "Learn" },
+    { href: "/wtf", label: "WTF?" },
   ]
 
   return (
