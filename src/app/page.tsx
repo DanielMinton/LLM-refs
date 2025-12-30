@@ -33,35 +33,35 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-              <Button size="lg" asChild className="group hover:shadow-2xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105">
+              <Button size="lg" asChild className="group">
                 <Link href="/leaderboards">
                   View Leaderboards
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                  <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" asChild className="group hover:shadow-xl hover:shadow-purple-600/30 hover:border-purple-600/50 transition-all duration-300 hover:scale-105">
+              <Button size="lg" variant="outline" asChild className="group">
                 <Link href="/compare">
                   Compare Models
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300 opacity-0 group-hover:opacity-100" />
+                  <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 pt-12 text-left">
-              <div className="p-4 rounded-lg hover:bg-primary/5 transition-all duration-300 hover:scale-105 cursor-pointer group">
-                <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">500+</div>
+              <div className="p-4 rounded-lg">
+                <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">500+</div>
                 <div className="text-xs md:text-sm text-muted-foreground">AI Models</div>
               </div>
-              <div className="p-4 rounded-lg hover:bg-purple-600/5 transition-all duration-300 hover:scale-105 cursor-pointer group">
-                <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">50+</div>
+              <div className="p-4 rounded-lg">
+                <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">50+</div>
                 <div className="text-xs md:text-sm text-muted-foreground">Benchmarks</div>
               </div>
-              <div className="p-4 rounded-lg hover:bg-pink-600/5 transition-all duration-300 hover:scale-105 cursor-pointer group">
-                <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-pink-600 to-red-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">25+</div>
+              <div className="p-4 rounded-lg">
+                <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-pink-600 to-red-600 bg-clip-text text-transparent">25+</div>
                 <div className="text-xs md:text-sm text-muted-foreground">Providers</div>
               </div>
-              <div className="p-4 rounded-lg hover:bg-red-600/5 transition-all duration-300 hover:scale-105 cursor-pointer group">
-                <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">Daily</div>
+              <div className="p-4 rounded-lg">
+                <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">Daily</div>
                 <div className="text-xs md:text-sm text-muted-foreground">Updates</div>
               </div>
             </div>
@@ -79,30 +79,30 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            <Card className="border-2 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:scale-105 group cursor-pointer">
+            <Card className="border-2">
               <CardHeader>
-                <BarChart3 className="h-10 w-10 mb-2 text-primary group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300" />
-                <CardTitle className="group-hover:text-primary transition-colors duration-300">Multi-Dimensional Leaderboards</CardTitle>
+                <BarChart3 className="h-10 w-10 mb-2 text-primary" />
+                <CardTitle>Multi-Dimensional Leaderboards</CardTitle>
                 <CardDescription>
                   Compare models across LLMs, vision, audio, and video with real benchmark scores
                 </CardDescription>
               </CardHeader>
             </Card>
 
-            <Card className="border-2 hover:border-purple-600/50 hover:shadow-2xl hover:shadow-purple-600/20 transition-all duration-500 hover:scale-105 group cursor-pointer">
+            <Card className="border-2">
               <CardHeader>
-                <Zap className="h-10 w-10 mb-2 text-purple-600 group-hover:scale-110 group-hover:-rotate-12 transition-transform duration-300" />
-                <CardTitle className="group-hover:text-purple-600 transition-colors duration-300">Performance vs Cost</CardTitle>
+                <Zap className="h-10 w-10 mb-2 text-purple-600" />
+                <CardTitle>Performance vs Cost</CardTitle>
                 <CardDescription>
                   Find the perfect balance between capability and pricing for your use case
                 </CardDescription>
               </CardHeader>
             </Card>
 
-            <Card className="border-2 hover:border-blue-600/50 hover:shadow-2xl hover:shadow-blue-600/20 transition-all duration-500 hover:scale-105 group cursor-pointer">
+            <Card className="border-2">
               <CardHeader>
-                <BookOpen className="h-10 w-10 mb-2 text-blue-600 group-hover:scale-110 group-hover:rotate-12 transition-transform duration-300" />
-                <CardTitle className="group-hover:text-blue-600 transition-colors duration-300">Educational Content</CardTitle>
+                <BookOpen className="h-10 w-10 mb-2 text-blue-600" />
+                <CardTitle>Educational Content</CardTitle>
                 <CardDescription>
                   Learn when and why to use different models with real-world examples
                 </CardDescription>

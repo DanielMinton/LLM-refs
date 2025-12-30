@@ -4,7 +4,6 @@ import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { Header } from '@/components/layout/header'
 import { Footer } from '@/components/layout/footer'
-import { NeuralNetworkViz } from '@/components/wtf/neural-network-viz'
 import { FloatingNav, FloatingActionButton } from '@/components/wtf/floating-nav'
 import { Brain, Zap, DollarSign, Target, Gauge, Code, Sparkles } from 'lucide-react'
 
@@ -132,7 +131,7 @@ export default function WTFPage() {
           </div>
         </motion.div>
 
-        {/* Neural Network Visualization */}
+        {/* Neural Network Explanation */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -145,14 +144,10 @@ export default function WTFPage() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4">
               This is What's Happening Inside
             </h2>
-            <p className="text-base sm:text-lg text-muted-foreground px-4">
-              A neural network doing its thing. Rotate it. It's interactive. You're welcome.
+            <p className="text-base sm:text-lg text-muted-foreground px-4 max-w-3xl mx-auto">
+              Neural networks process data through layers of mathematical functions. Input goes in, gets transformed through multiple layers (the "neurons"), and predictions come out. It's like a very sophisticated pattern-matching machine built from millions of tiny math operations.
             </p>
           </div>
-          <NeuralNetworkViz />
-          <p className="text-center text-xs sm:text-sm text-muted-foreground mt-4 italic px-4">
-            Each glowing ball is a "neuron" (math function). The lines are connections. Data flows left to right. Magic happens in the middle.
-          </p>
         </motion.div>
 
         {/* Concepts Grid */}
