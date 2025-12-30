@@ -24,7 +24,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-sm">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-8">
-          <Link href="/" className="hover:scale-105 transition-transform duration-300">
+          <Link href="/">
             <LLMRefsLogo className="h-8 md:h-10 w-auto" />
           </Link>
 
@@ -47,7 +47,6 @@ export function Header() {
             variant="ghost"
             size="icon"
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="hover:scale-110 transition-transform duration-300 hover:bg-primary/10"
           >
             <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
             <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
@@ -58,7 +57,7 @@ export function Header() {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden hover:scale-110 transition-transform duration-300"
+            className="md:hidden"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? (
