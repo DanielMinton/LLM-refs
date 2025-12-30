@@ -13,6 +13,7 @@ export function Header() {
 
   const navLinks = [
     { href: "/leaderboards", label: "Leaderboards" },
+    { href: "/visualize", label: "Visualize" },
     { href: "/timeline", label: "Timeline" },
     { href: "/compare", label: "Compare" },
     { href: "/learn", label: "Learn" },
