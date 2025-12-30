@@ -33,10 +33,18 @@ export const metadata: Metadata = {
     siteName: "LLM-refs",
     images: [
       {
-        url: "/og-image.png",
-        width: 3840,
-        height: 2160,
+        url: "/og-image_med.png",
+        width: 1200,
+        height: 630,
         alt: "LLM-refs - AI Models Universe",
+        type: "image/png",
+      },
+      {
+        url: "/og-image_lrg.png",
+        width: 2400,
+        height: 1260,
+        alt: "LLM-refs - AI Models Universe (High-res)",
+        type: "image/png",
       },
     ],
   },
@@ -45,7 +53,7 @@ export const metadata: Metadata = {
     title: "LLM-refs - AI Models Universe",
     description: "Comprehensive AI model reference platform. Compare performance, pricing, and capabilities.",
     creator: "@TheModernOpossum",
-    images: ["/og-image.png"],
+    images: ["/og-image_lrg.png"],
   },
   icons: {
     icon: [
