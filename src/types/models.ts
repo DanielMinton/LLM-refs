@@ -35,6 +35,12 @@ export type Provider =
   | "Kuaishou"
   | "Luma AI"
   | "Haiper"
+  | "Fish Audio"
+  | "IndexAI"
+  | "Moonshot AI"
+  | "Open Source"
+  | "MiniMax"
+  | "Adobe"
 
 export interface LLMModel {
   id: string
@@ -111,7 +117,7 @@ export interface AudioModel {
   provider: Provider
   category: "audio"
   releaseDate: string
-  type: "tts" | "stt" | "music" | "voice-cloning"
+  type: "tts" | "stt" | "music" | "voice-cloning" | "conversational" | "platform"
 
   // Pricing
   costPer1MChars?: number

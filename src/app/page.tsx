@@ -31,35 +31,36 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-              <Button size="lg" asChild>
+              <Button size="lg" asChild className="group hover:shadow-2xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105">
                 <Link href="/leaderboards">
                   View Leaderboards
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" asChild>
+              <Button size="lg" variant="outline" asChild className="group hover:shadow-xl hover:shadow-purple-600/30 hover:border-purple-600/50 transition-all duration-300 hover:scale-105">
                 <Link href="/compare">
                   Compare Models
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300 opacity-0 group-hover:opacity-100" />
                 </Link>
               </Button>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-12 text-left">
-              <div>
-                <div className="text-3xl font-bold text-primary">500+</div>
-                <div className="text-sm text-muted-foreground">AI Models</div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 pt-12 text-left">
+              <div className="p-4 rounded-lg hover:bg-primary/5 transition-all duration-300 hover:scale-105 cursor-pointer group">
+                <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">500+</div>
+                <div className="text-xs md:text-sm text-muted-foreground">AI Models</div>
               </div>
-              <div>
-                <div className="text-3xl font-bold text-primary">50+</div>
-                <div className="text-sm text-muted-foreground">Benchmarks</div>
+              <div className="p-4 rounded-lg hover:bg-purple-600/5 transition-all duration-300 hover:scale-105 cursor-pointer group">
+                <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">50+</div>
+                <div className="text-xs md:text-sm text-muted-foreground">Benchmarks</div>
               </div>
-              <div>
-                <div className="text-3xl font-bold text-primary">25+</div>
-                <div className="text-sm text-muted-foreground">Providers</div>
+              <div className="p-4 rounded-lg hover:bg-pink-600/5 transition-all duration-300 hover:scale-105 cursor-pointer group">
+                <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-pink-600 to-red-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">25+</div>
+                <div className="text-xs md:text-sm text-muted-foreground">Providers</div>
               </div>
-              <div>
-                <div className="text-3xl font-bold text-primary">Daily</div>
-                <div className="text-sm text-muted-foreground">Updates</div>
+              <div className="p-4 rounded-lg hover:bg-red-600/5 transition-all duration-300 hover:scale-105 cursor-pointer group">
+                <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">Daily</div>
+                <div className="text-xs md:text-sm text-muted-foreground">Updates</div>
               </div>
             </div>
           </div>
@@ -76,30 +77,30 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            <Card className="border-2">
+            <Card className="border-2 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:scale-105 group cursor-pointer">
               <CardHeader>
-                <BarChart3 className="h-10 w-10 mb-2 text-primary" />
-                <CardTitle>Multi-Dimensional Leaderboards</CardTitle>
+                <BarChart3 className="h-10 w-10 mb-2 text-primary group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300" />
+                <CardTitle className="group-hover:text-primary transition-colors duration-300">Multi-Dimensional Leaderboards</CardTitle>
                 <CardDescription>
                   Compare models across LLMs, vision, audio, and video with real benchmark scores
                 </CardDescription>
               </CardHeader>
             </Card>
 
-            <Card className="border-2">
+            <Card className="border-2 hover:border-purple-600/50 hover:shadow-2xl hover:shadow-purple-600/20 transition-all duration-500 hover:scale-105 group cursor-pointer">
               <CardHeader>
-                <Zap className="h-10 w-10 mb-2 text-primary" />
-                <CardTitle>Performance vs Cost</CardTitle>
+                <Zap className="h-10 w-10 mb-2 text-purple-600 group-hover:scale-110 group-hover:-rotate-12 transition-transform duration-300" />
+                <CardTitle className="group-hover:text-purple-600 transition-colors duration-300">Performance vs Cost</CardTitle>
                 <CardDescription>
                   Find the perfect balance between capability and pricing for your use case
                 </CardDescription>
               </CardHeader>
             </Card>
 
-            <Card className="border-2">
+            <Card className="border-2 hover:border-blue-600/50 hover:shadow-2xl hover:shadow-blue-600/20 transition-all duration-500 hover:scale-105 group cursor-pointer">
               <CardHeader>
-                <BookOpen className="h-10 w-10 mb-2 text-primary" />
-                <CardTitle>Educational Content</CardTitle>
+                <BookOpen className="h-10 w-10 mb-2 text-blue-600 group-hover:scale-110 group-hover:rotate-12 transition-transform duration-300" />
+                <CardTitle className="group-hover:text-blue-600 transition-colors duration-300">Educational Content</CardTitle>
                 <CardDescription>
                   Learn when and why to use different models with real-world examples
                 </CardDescription>
@@ -108,10 +109,10 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-12">
-            <Button size="lg" variant="outline" asChild>
+            <Button size="lg" variant="outline" asChild className="group hover:shadow-xl hover:shadow-blue-600/30 hover:border-blue-600/50 transition-all duration-300 hover:scale-105">
               <Link href="/learn">
                 Start Learning
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
               </Link>
             </Button>
           </div>
@@ -144,70 +145,80 @@ export default function Home() {
                       </tr>
                     </thead>
                     <tbody className="divide-y">
-                      <tr className="hover:bg-muted/50 transition-colors">
-                        <td className="p-4 font-medium">1</td>
-                        <td className="p-4">
-                          <div className="font-semibold">GPT-4 Turbo</div>
-                          <div className="text-sm text-muted-foreground">gpt-4-turbo</div>
+                      <tr className="hover:bg-primary/5 hover:shadow-md transition-all duration-300 group cursor-pointer">
+                        <td className="p-3 md:p-4 font-medium">1</td>
+                        <td className="p-3 md:p-4">
+                          <Link href="/models/gpt-4-turbo" className="hover:underline group-hover:text-primary transition-colors">
+                            <div className="font-semibold">GPT-4 Turbo</div>
+                            <div className="text-xs md:text-sm text-muted-foreground">gpt-4-turbo</div>
+                          </Link>
                         </td>
-                        <td className="p-4">
-                          <Badge variant="outline">OpenAI</Badge>
+                        <td className="p-3 md:p-4">
+                          <Badge variant="outline" className="group-hover:border-primary/50 transition-colors">OpenAI</Badge>
                         </td>
-                        <td className="p-4 text-right font-mono">86.4%</td>
-                        <td className="p-4 text-right font-mono">87.2%</td>
-                        <td className="p-4 text-right font-mono text-green-600 dark:text-green-400">$10</td>
+                        <td className="p-3 md:p-4 text-right font-mono text-sm">86.4%</td>
+                        <td className="p-3 md:p-4 text-right font-mono text-sm">87.2%</td>
+                        <td className="p-3 md:p-4 text-right font-mono text-sm text-green-600 dark:text-green-400 group-hover:scale-110 transition-transform">$10</td>
                       </tr>
-                      <tr className="hover:bg-muted/50 transition-colors">
-                        <td className="p-4 font-medium">2</td>
-                        <td className="p-4">
-                          <div className="font-semibold">Claude Opus 4.5</div>
-                          <div className="text-sm text-muted-foreground">claude-opus-4-5</div>
+                      <tr className="hover:bg-orange-600/5 hover:shadow-md transition-all duration-300 group cursor-pointer">
+                        <td className="p-3 md:p-4 font-medium">2</td>
+                        <td className="p-3 md:p-4">
+                          <Link href="/models/claude-opus-4-5" className="hover:underline group-hover:text-orange-600 transition-colors">
+                            <div className="font-semibold">Claude Opus 4.5</div>
+                            <div className="text-xs md:text-sm text-muted-foreground">claude-opus-4-5</div>
+                          </Link>
                         </td>
-                        <td className="p-4">
-                          <Badge variant="outline">Anthropic</Badge>
+                        <td className="p-3 md:p-4">
+                          <Badge variant="outline" className="group-hover:border-orange-600/50 transition-colors">Anthropic</Badge>
                         </td>
-                        <td className="p-4 text-right font-mono">88.7%</td>
-                        <td className="p-4 text-right font-mono">92.0%</td>
-                        <td className="p-4 text-right font-mono text-green-600 dark:text-green-400">$15</td>
+                        <td className="p-3 md:p-4 text-right font-mono text-sm">88.7%</td>
+                        <td className="p-3 md:p-4 text-right font-mono text-sm">92.0%</td>
+                        <td className="p-3 md:p-4 text-right font-mono text-sm text-green-600 dark:text-green-400 group-hover:scale-110 transition-transform">$15</td>
                       </tr>
-                      <tr className="hover:bg-muted/50 transition-colors">
-                        <td className="p-4 font-medium">3</td>
-                        <td className="p-4">
-                          <div className="font-semibold">Gemini 1.5 Pro</div>
-                          <div className="text-sm text-muted-foreground">gemini-1.5-pro</div>
+                      <tr className="hover:bg-blue-600/5 hover:shadow-md transition-all duration-300 group cursor-pointer">
+                        <td className="p-3 md:p-4 font-medium">3</td>
+                        <td className="p-3 md:p-4">
+                          <Link href="/models/gemini-1.5-pro" className="hover:underline group-hover:text-blue-600 transition-colors">
+                            <div className="font-semibold">Gemini 1.5 Pro</div>
+                            <div className="text-xs md:text-sm text-muted-foreground">gemini-1.5-pro</div>
+                          </Link>
                         </td>
-                        <td className="p-4">
-                          <Badge variant="outline">Google</Badge>
+                        <td className="p-3 md:p-4">
+                          <Badge variant="outline" className="group-hover:border-blue-600/50 transition-colors">Google</Badge>
                         </td>
-                        <td className="p-4 text-right font-mono">85.9%</td>
-                        <td className="p-4 text-right font-mono">84.1%</td>
-                        <td className="p-4 text-right font-mono text-green-600 dark:text-green-400">$7</td>
+                        <td className="p-3 md:p-4 text-right font-mono text-sm">85.9%</td>
+                        <td className="p-3 md:p-4 text-right font-mono text-sm">84.1%</td>
+                        <td className="p-3 md:p-4 text-right font-mono text-sm text-green-600 dark:text-green-400 group-hover:scale-110 transition-transform">$7</td>
                       </tr>
-                      <tr className="hover:bg-muted/50 transition-colors">
-                        <td className="p-4 font-medium">4</td>
-                        <td className="p-4">
-                          <div className="font-semibold">Claude Sonnet 4.5</div>
-                          <div className="text-sm text-muted-foreground">claude-sonnet-4-5</div>
+                      <tr className="hover:bg-orange-600/5 hover:shadow-md transition-all duration-300 group cursor-pointer">
+                        <td className="p-3 md:p-4 font-medium">4</td>
+                        <td className="p-3 md:p-4">
+                          <Link href="/models/claude-sonnet-4-5" className="hover:underline group-hover:text-orange-600 transition-colors">
+                            <div className="font-semibold">Claude Sonnet 4.5</div>
+                            <div className="text-xs md:text-sm text-muted-foreground">claude-sonnet-4-5</div>
+                          </Link>
                         </td>
-                        <td className="p-4">
-                          <Badge variant="outline">Anthropic</Badge>
+                        <td className="p-3 md:p-4">
+                          <Badge variant="outline" className="group-hover:border-orange-600/50 transition-colors">Anthropic</Badge>
                         </td>
-                        <td className="p-4 text-right font-mono">88.3%</td>
-                        <td className="p-4 text-right font-mono">93.7%</td>
-                        <td className="p-4 text-right font-mono text-green-600 dark:text-green-400">$3</td>
+                        <td className="p-3 md:p-4 text-right font-mono text-sm">88.3%</td>
+                        <td className="p-3 md:p-4 text-right font-mono text-sm">93.7%</td>
+                        <td className="p-3 md:p-4 text-right font-mono text-sm text-green-600 dark:text-green-400 group-hover:scale-110 transition-transform">$3</td>
                       </tr>
-                      <tr className="hover:bg-muted/50 transition-colors">
-                        <td className="p-4 font-medium">5</td>
-                        <td className="p-4">
-                          <div className="font-semibold">DeepSeek R1</div>
-                          <div className="text-sm text-muted-foreground">deepseek-r1</div>
+                      <tr className="hover:bg-green-600/5 hover:shadow-md transition-all duration-300 group cursor-pointer">
+                        <td className="p-3 md:p-4 font-medium">5</td>
+                        <td className="p-3 md:p-4">
+                          <Link href="/models/deepseek-r1" className="hover:underline group-hover:text-green-600 transition-colors">
+                            <div className="font-semibold">DeepSeek R1</div>
+                            <div className="text-xs md:text-sm text-muted-foreground">deepseek-r1</div>
+                          </Link>
                         </td>
-                        <td className="p-4">
-                          <Badge variant="outline">DeepSeek</Badge>
+                        <td className="p-3 md:p-4">
+                          <Badge variant="outline" className="group-hover:border-green-600/50 transition-colors">DeepSeek</Badge>
                         </td>
-                        <td className="p-4 text-right font-mono">79.8%</td>
-                        <td className="p-4 text-right font-mono">96.3%</td>
-                        <td className="p-4 text-right font-mono text-green-600 dark:text-green-400">$0.55</td>
+                        <td className="p-3 md:p-4 text-right font-mono text-sm">79.8%</td>
+                        <td className="p-3 md:p-4 text-right font-mono text-sm">96.3%</td>
+                        <td className="p-3 md:p-4 text-right font-mono text-sm text-green-600 dark:text-green-400 group-hover:scale-110 transition-transform">$0.55</td>
                       </tr>
                     </tbody>
                   </table>
@@ -216,10 +227,10 @@ export default function Home() {
             </Card>
 
             <div className="text-center mt-8">
-              <Button asChild variant="outline">
+              <Button asChild variant="outline" className="group hover:shadow-xl hover:shadow-primary/30 hover:border-primary/50 transition-all duration-300 hover:scale-105">
                 <Link href="/leaderboards/llm">
                   View Full LLM Leaderboard
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
               </Button>
             </div>
