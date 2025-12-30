@@ -5,6 +5,7 @@ import { useState } from 'react'
 import { Header } from '@/components/layout/header'
 import { Footer } from '@/components/layout/footer'
 import { NeuralNetworkViz } from '@/components/wtf/neural-network-viz'
+import { FloatingNav, FloatingActionButton } from '@/components/wtf/floating-nav'
 import { Brain, Zap, DollarSign, Target, Gauge, Code, Sparkles } from 'lucide-react'
 
 export default function WTFPage() {
@@ -76,9 +77,13 @@ export default function WTFPage() {
     }
   ]
 
+  const navSections = sections.map(s => ({ id: s.id, title: s.title }))
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-background via-background to-primary/5">
       <Header />
+      <FloatingNav sections={navSections} />
+      <FloatingActionButton />
 
       <main className="container py-12 md:py-24">
         {/* Hero Section */}
@@ -86,7 +91,7 @@ export default function WTFPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center space-y-6 mb-20"
+          className="text-center space-y-4 md:space-y-6 mb-12 md:mb-20 px-4"
         >
           <motion.div
             animate={{
@@ -94,33 +99,34 @@ export default function WTFPage() {
               rotate: [0, 5, -5, 0],
             }}
             transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
-            className="inline-block text-8xl mb-4"
+            className="inline-block text-6xl sm:text-7xl md:text-8xl mb-4"
           >
             🤯
           </motion.div>
 
-          <h1 className="text-5xl md:text-7xl font-black tracking-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight px-4">
             <span className="bg-gradient-to-r from-primary via-purple-500 to-pink-500 bg-clip-text text-transparent">
               WTF
             </span>{" "}
             is AI?
           </h1>
 
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
             You know it's a big deal. You see the headlines. But{" "}
             <span className="text-primary font-semibold">what does it all mean?</span>
-            <br />
+            <br className="hidden sm:block" />
+            <span className="sm:hidden"> </span>
             Let's break it down with pretty graphics and minimal BS.
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-4 pt-4 text-sm text-muted-foreground">
-            <span className="px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 pt-4 text-xs sm:text-sm text-muted-foreground px-4">
+            <span className="px-3 sm:px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
               For humans who aren't robots
             </span>
-            <span className="px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20">
+            <span className="px-3 sm:px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20">
               Also funny if you're a dev
             </span>
-            <span className="px-4 py-2 rounded-full bg-pink-500/10 border border-pink-500/20">
+            <span className="px-3 sm:px-4 py-2 rounded-full bg-pink-500/10 border border-pink-500/20">
               3D graphics included
             </span>
           </div>
@@ -132,34 +138,35 @@ export default function WTFPage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mb-20"
+          className="mb-12 md:mb-20 px-4"
+          id="neural"
         >
-          <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <div className="text-center mb-6 md:mb-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4">
               This is What's Happening Inside
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-base sm:text-lg text-muted-foreground px-4">
               A neural network doing its thing. Rotate it. It's interactive. You're welcome.
             </p>
           </div>
           <NeuralNetworkViz />
-          <p className="text-center text-sm text-muted-foreground mt-4 italic">
+          <p className="text-center text-xs sm:text-sm text-muted-foreground mt-4 italic px-4">
             Each glowing ball is a "neuron" (math function). The lines are connections. Data flows left to right. Magic happens in the middle.
           </p>
         </motion.div>
 
         {/* Concepts Grid */}
-        <div className="space-y-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <div className="space-y-6 md:space-y-8 px-4">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-4">
               The Concepts, Decoded
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-base sm:text-lg text-muted-foreground px-4">
               Click any card to expand. Prepare for enlightenment (or at least mild understanding).
             </p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-4 sm:gap-6 md:grid-cols-2">
             {sections.map((section, index) => {
               const Icon = section.icon
               const isActive = activeSection === section.id
@@ -167,6 +174,7 @@ export default function WTFPage() {
               return (
                 <motion.div
                   key={section.id}
+                  id={section.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -174,7 +182,7 @@ export default function WTFPage() {
                   whileHover={{ scale: isActive ? 1 : 1.02 }}
                   onClick={() => setActiveSection(isActive ? null : section.id)}
                   className={`
-                    relative p-6 rounded-2xl border-2 cursor-pointer transition-all duration-500
+                    relative p-4 sm:p-6 rounded-2xl border-2 cursor-pointer transition-all duration-500
                     ${isActive
                       ? 'bg-gradient-to-br ' + section.color + ' border-transparent shadow-2xl shadow-primary/30'
                       : 'bg-card border-border hover:border-primary/50 hover:shadow-xl'
@@ -190,10 +198,10 @@ export default function WTFPage() {
                     </div>
 
                     <div className="flex-1">
-                      <h3 className={`text-xl font-bold mb-1 ${isActive ? 'text-white' : 'text-foreground'}`}>
+                      <h3 className={`text-lg sm:text-xl font-bold mb-1 ${isActive ? 'text-white' : 'text-foreground'}`}>
                         {section.title}
                       </h3>
-                      <p className={`text-sm ${isActive ? 'text-white/80' : 'text-muted-foreground'}`}>
+                      <p className={`text-xs sm:text-sm ${isActive ? 'text-white/80' : 'text-muted-foreground'}`}>
                         {section.subtitle}
                       </p>
                     </div>
@@ -240,13 +248,13 @@ export default function WTFPage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mt-24 text-center space-y-6 p-12 rounded-3xl bg-gradient-to-r from-primary/10 via-purple-500/10 to-pink-500/10 border-2 border-primary/20"
+          className="mt-16 md:mt-24 text-center space-y-4 md:space-y-6 p-6 sm:p-8 md:p-12 mx-4 rounded-3xl bg-gradient-to-r from-primary/10 via-purple-500/10 to-pink-500/10 border-2 border-primary/20"
         >
-          <div className="text-6xl mb-4">🎓</div>
-          <h2 className="text-3xl md:text-4xl font-bold">
+          <div className="text-5xl sm:text-6xl mb-4">🎓</div>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold px-4">
             Still Confused? That's Normal.
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
             AI is complicated. These visualizations are simplified. But now you know enough to sound smart at parties.
             Check out the leaderboards to see which models are actually good at this stuff.
           </p>
@@ -254,7 +262,7 @@ export default function WTFPage() {
             href="/leaderboards"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-block px-8 py-4 rounded-xl bg-primary text-primary-foreground font-semibold hover:shadow-xl hover:shadow-primary/50 transition-all duration-300"
+            className="inline-block px-6 sm:px-8 py-3 sm:py-4 rounded-xl bg-primary text-primary-foreground font-semibold hover:shadow-xl hover:shadow-primary/50 transition-all duration-300 text-sm sm:text-base"
           >
             Check the Leaderboards →
           </motion.a>

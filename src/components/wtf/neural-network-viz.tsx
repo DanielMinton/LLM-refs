@@ -86,7 +86,7 @@ function NeuralConnections() {
 
 export function NeuralNetworkViz() {
   return (
-    <div className="w-full h-[600px] rounded-xl overflow-hidden bg-black/50 border border-primary/20">
+    <div className="w-full h-[400px] sm:h-[500px] md:h-[600px] rounded-xl overflow-hidden bg-black/50 border border-primary/20">
       <Canvas camera={{ position: [8, 0, 8], fov: 50 }}>
         <ambientLight intensity={0.5} />
         <pointLight position={[10, 10, 10]} intensity={1} />
